@@ -45,7 +45,7 @@ HttpRequest.interceptors.request.use((config: AxiosRequestConfig) => {
 // 响应拦截器
 HttpRequest.interceptors.response.use((response: AxiosResponse<ApiResponse>) => {
     const { code, data, message: responseMessage } = response.data
-    
+    console.log('data request',data)
     switch (code) {
         case 200:
         case 0: // 有些接口可能使用 0 表示成功
